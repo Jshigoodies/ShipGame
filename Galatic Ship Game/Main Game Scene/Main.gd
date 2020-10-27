@@ -10,6 +10,9 @@ var changeDiff1 = 9 #changes the unit of time
 var difficulty2 = 5 #after 5 units of time
 var changeDiff2 = 4 #changes the time
 
+var difficulty3 = 20 #after 20 units of time
+var changeDiff3 = 10 #changes it to start at 10 units of time
+
 
 var Enemy = preload("res://Main Game Scene/Enemy.tscn")
 var Enemy2 = preload("res://Main Game Scene/Enemy2.tscn")
