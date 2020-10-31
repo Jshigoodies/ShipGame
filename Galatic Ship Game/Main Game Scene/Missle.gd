@@ -4,13 +4,10 @@ var velocity = Vector2.ZERO
 
 func _ready():
 	$AnimationPlayer.play("MissileBoosters")
+	add_to_group("Enemy")
+	
 
 func _physics_process(delta):
-	
-	#Insert Direction Of Bullet code to point at player and go in at the players direction here for Future me to Implement
-	
-	
-	
 	
 	velocity = Vector2(0,5)
 	velocity = move_and_collide(velocity)

@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 const SPEED = 200
-const FRICTION = 600
-const ACCEL = 600
+const FRICTION = 900
+const ACCEL = 900
 
 var velocity = Vector2.ZERO #moves character
 var input_vector = Vector2.ZERO #which direction the character move
@@ -13,6 +13,7 @@ var bullet = preload("res://Main Game Scene/Bullet.tscn")
 
 func _ready():
 	$AnimationPlayer.play("LoopedBoosters")
+	add_to_group("Player")
 
 
 

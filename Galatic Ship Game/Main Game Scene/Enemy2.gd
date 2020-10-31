@@ -6,12 +6,12 @@ var rng = RandomNumberGenerator.new()
 var velocity = Vector2.ZERO
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	add_to_group("Enemy")
 
 func _process(delta):
 	rng.randomize()
 	TimeToFire = TimeToFire - delta #this enemy can shoot
-	print(TimeToFire)
+	
 	if(TimeToFire < 0):
 		TimeToFire = rng.randf_range(4,6)
 		
