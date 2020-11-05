@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED = 200
+const SPEED = 150
 const FRICTION = 900
 const ACCEL = 900
 
@@ -11,10 +11,10 @@ onready var FireRate = $Timer
 
 var bullet = preload("res://Main Game Scene/Bullet.tscn")
 
+
 func _ready():
 	$AnimationPlayer.play("LoopedBoosters")
 	add_to_group("Player")
-
 
 
 func _physics_process(delta):
@@ -22,7 +22,7 @@ func _physics_process(delta):
 	input.y = (Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up"))
 	input.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
 	input = input.normalized()
-	print(str(input.x) + " " + str(input.y))
+	#print(str(input.x) + " " + str(input.y))
 	
 	#I want to add acceleration and friction
 	if(input != Vector2.ZERO):

@@ -6,6 +6,7 @@ var velocity = Vector2.ZERO
 var rng = RandomNumberGenerator.new()#a number of time to know when it stop moving
 var StopTime
 
+
 func _ready():
 	add_to_group("Enemy")
 	rng.randomize()
@@ -17,7 +18,6 @@ func _physics_process(delta):
 		velocity = Vector2(0,0.4)
 	else: 
 		velocity = Vector2.ZERO
-	
 	
 	velocity = move_and_collide(velocity)
 

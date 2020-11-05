@@ -64,7 +64,7 @@ func _process(delta):
 		changeDiff2 = changeDiff2 - 1 #increase the difficulty for future use
 		if(changeDiff2<= 0.0): #if it reached max difficulty, then randomly spawn the faster or slower depending on rng
 			rng.randomize()
-			var randomDiff2 = rng.randf_range(0,3)
+			var randomDiff2 = rng.randf_range(5,7)
 			changeDiff2 = randomDiff2
 			
 	#For Enemy1 Spawner
@@ -83,7 +83,7 @@ func _process(delta):
 		changeDiff1 = changeDiff1 - 1
 		if(changeDiff1 <= 0.0):
 			rng.randomize()
-			var randomDiff1 = rng.randf_range(0,3)
+			var randomDiff1 = rng.randf_range(2,4)
 			changeDiff1 = randomDiff1
 	
 	
