@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+var HEALTH = 3
 
 var rng = RandomNumberGenerator.new()
 var velocity = Vector2.ZERO
@@ -16,8 +17,13 @@ func _process(delta):
 	velocity = move_and_collide(velocity)
 
 
-func _on_Area2D_area_entered(area):
-	queue_free() #if bullet enters enimes or enimies enter enimies (yes there is friendly fire for the bad guys)
+func _on_Area2D_area_entered(area): 	
+	#if bullet enters enimes or enimies enter enimies (yes there is friendly fire for the bad guys)
+	if HEALTH != 0:
+		HEALTH = HEALTH - 1
+	else:
+		queue_free() 
+	
 	#pass
 
 

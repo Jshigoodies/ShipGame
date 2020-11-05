@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var HEALTH = 6
+
 var Gun = preload("res://Main Game Scene/Missle.tscn")
 var TimeToFire = 5
 var rng = RandomNumberGenerator.new()
@@ -35,7 +37,10 @@ func _process(delta):
 
 
 func _on_Area2D_area_entered(area):
-	queue_free()
+	if HEALTH != 0:
+		HEALTH = HEALTH -1
+	else:
+		queue_free()
 	
 
 func _on_VisibilityNotifier2D_screen_exited():

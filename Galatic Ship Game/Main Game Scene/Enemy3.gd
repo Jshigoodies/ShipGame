@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var HEALTH = 13
+
 var velocity = Vector2.ZERO
 var rng = RandomNumberGenerator.new()#a number of time to know when it stop moving
 var StopTime
@@ -21,6 +23,9 @@ func _physics_process(delta):
 
 
 func _on_Area2D_area_entered(area):
-	queue_free()
+	if HEALTH != 0:
+		HEALTH = HEALTH - 1
+	else:
+		queue_free()
 
 

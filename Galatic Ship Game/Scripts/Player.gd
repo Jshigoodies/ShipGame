@@ -5,7 +5,7 @@ const FRICTION = 900
 const ACCEL = 900
 
 var velocity = Vector2.ZERO #moves character
-var input_vector = Vector2.ZERO #which direction the character move
+var input = Vector2.ZERO #which direction the character move
 
 onready var FireRate = $Timer
 
@@ -19,14 +19,14 @@ func _ready():
 
 func _physics_process(delta):
 	#gets direction
-	input_vector.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
-	input_vector.y = (Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up"))
-	input_vector = input_vector.normalized()
-	
+	input.y = (Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up"))
+	input.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
+	input = input.normalized()
+	print(str(input.x) + " " + str(input.y))
 	
 	#I want to add acceleration and friction
-	if(input_vector != Vector2.ZERO):
-		velocity = velocity.move_toward(SPEED*input_vector, ACCEL*delta)
+	if(input != Vector2.ZERO):
+		velocity = velocity.move_toward(SPEED*input, ACCEL*delta)
 		
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION*delta)

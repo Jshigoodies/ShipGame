@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-
+const SPEED = -8
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -12,7 +12,7 @@ func _ready():
 	pass
 	
 func _physics_process(delta):
-	velocity = Vector2(0,-10)
+	velocity = Vector2(0,SPEED)
 	
 	velocity = move_and_collide(velocity)
 
