@@ -13,6 +13,15 @@ func _ready():
 func _physics_process(delta):
 	
 	
-	velocity = Vector2(direction,10)
+	velocity = Vector2(direction,35)
 
 	velocity = move_and_slide(velocity)
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
+	
+
+
+func _on_Area2D_area_entered(area):
+	queue_free()

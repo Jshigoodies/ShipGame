@@ -3,7 +3,7 @@ extends KinematicBody2D
 var HEALTH = 6
 
 var Gun = preload("res://Main Game Scene/Missle.tscn")
-var TimeToFire = 5
+var TimeToFire = 7
 var rng = RandomNumberGenerator.new()
 var velocity = Vector2.ZERO
 # Called when the node enters the scene tree for the first time.
