@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/BOSS,png.png" type="Texture" id=1]
+[ext_resource path="res://Main Game Scene/Boss.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Expand Attack"
+length = 8.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1.5, 1.5 ) ]
+}
+
+[node name="Boss" type="KinematicBody2D"]
+scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -60 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -48, -48, 0, -80, 64, -80, 96, -64, 112, -64, 128, -32, 128, -16, 128, 0, 128, 16, 144, 16, 144, 32, 144, 32, 128, 48, 112, 48, 96, 64, 64, 80, 32, 96, 0, 96, -32, 96, -48, 112, -64, 64, -80, 32, -80, 16, -80, 0, -64, -16 )
+
+[node name="AttackMoves" type="AnimationPlayer" parent="."]
+"anims/Expand Attack" = SubResource( 2 )
