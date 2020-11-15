@@ -56,7 +56,19 @@ func _process(delta):
 		if(duration < 0):
 			duration = 3
 			print(num)
-			#ATTACK HERE AT SIDES
+			if(num == 1):
+				pass
+			elif(num == 2):
+				pass
+			elif(num == 3):                  #ATTACK HERE AT SIDES
+				pass
+			elif(num == 4):
+				pass
+			elif(num == 5):
+				pass
+			elif(num == 6):
+				pass
+
 #######################################################################################
 	#For Enemy3 Spawner
 	if(condition == false):
@@ -119,8 +131,3 @@ func _process(delta):
 				rng.randomize()
 				var randomDiff1 = rng.randf_range(2,4)
 				changeDiff1 = randomDiff1
-	
-	
-	
-	
-	
