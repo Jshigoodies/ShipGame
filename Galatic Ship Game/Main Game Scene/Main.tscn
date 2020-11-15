@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Main Game Scene/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Walls.png" type="Texture" id=2]
 [ext_resource path="res://Main Game Scene/Main.gd" type="Script" id=3]
-[ext_resource path="res://Main Game Scene/Boss.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -83,5 +82,35 @@ speed_scale = 0.25
 randomness = 1.0
 process_material = SubResource( 4 )
 
-[node name="Boss" parent="." instance=ExtResource( 4 )]
+[node name="SpawnBossPosition" type="Node2D" parent="."]
 position = Vector2( 256, 107 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 56.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BossAttacks" type="Node2D" parent="."]
+
+[node name="Attack1" type="Node2D" parent="BossAttacks"]
+position = Vector2( 552, 232 )
+
+[node name="Attack2" type="Node2D" parent="BossAttacks"]
+position = Vector2( 552, 256 )
+
+[node name="Attack3" type="Node2D" parent="BossAttacks"]
+position = Vector2( 552, 280 )
+
+[node name="Attack4" type="Node2D" parent="BossAttacks"]
+position = Vector2( -40, 232 )
+
+[node name="Attack5" type="Node2D" parent="BossAttacks"]
+position = Vector2( -40, 256 )
+
+[node name="Attack6" type="Node2D" parent="BossAttacks"]
+position = Vector2( -40, 280 )
