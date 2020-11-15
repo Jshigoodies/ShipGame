@@ -114,3 +114,14 @@ position = Vector2( -40, 256 )
 
 [node name="Attack6" type="Node2D" parent="BossAttacks"]
 position = Vector2( -40, 280 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 264.0
+margin_right = 496.0
+margin_bottom = 284.0
+text = "Reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]

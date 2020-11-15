@@ -25,7 +25,7 @@ var score = 0
 var condition = false #to see when the boss should spawn
 
 func _ready():
-	$Label.set_text(str(score))
+	$Label.set_text("Score: " + str(score))
 	# Replace with function body.
 	if(condition == true):
 		#spawnboss
@@ -39,7 +39,7 @@ func _process(delta):
 	if(condition == false):
 		$Label.set_text("Score: " + str(score))
 		score = score + 1
-		if(score == 500):
+		if(score == 5000):
 			condition = true
 			_ready() #calls the ready function to spawn
 ###################################################################################
@@ -131,3 +131,7 @@ func _process(delta):
 				rng.randomize()
 				var randomDiff1 = rng.randf_range(2,4)
 				changeDiff1 = randomDiff1
+
+
+func _on_Button_button_down():
+	get_tree().change_scene("res://Main Game Scene/Main.tscn")

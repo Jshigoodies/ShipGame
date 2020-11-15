@@ -34,7 +34,7 @@ func _physics_process(delta):
 #velocity = move_and_slide(velocity)
 	if(timeUntilAttack<0):
 		timeUntilAttack = 10
-		#ATTACK HERE
+		#ATTACK HERE <----------------------------Work on
 	else:
 		timeUntilAttack = timeUntilAttack - delta
 
