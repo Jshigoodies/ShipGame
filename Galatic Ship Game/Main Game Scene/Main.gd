@@ -60,7 +60,7 @@ func _process(delta):
 				pass
 			elif(num == 2):
 				pass
-			elif(num == 3):                  #ATTACK HERE AT SIDES
+			elif(num == 3):                  #ATTACK HERE AT SIDES < ----------------- work on
 				pass
 			elif(num == 4):
 				pass
