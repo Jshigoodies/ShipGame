@@ -131,7 +131,8 @@ func _process(delta):
 				rng.randomize()
 				var randomDiff1 = rng.randf_range(2,4)
 				changeDiff1 = randomDiff1
-
+				
 
 func _on_Button_button_down():
-	get_tree().change_scene("res://Main Game Scene/Main.tscn")
+	queue_free()
+	get_tree(). reload_current_scene()

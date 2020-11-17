@@ -120,7 +120,7 @@ margin_left = 432.0
 margin_top = 264.0
 margin_right = 496.0
 margin_bottom = 284.0
-text = "Reset"
+text = "Revive"
 __meta__ = {
 "_edit_use_anchors_": false
 }
