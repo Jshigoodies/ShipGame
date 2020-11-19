@@ -39,7 +39,7 @@ func _process(delta):
 	if(condition == false):
 		$Label.set_text("Score: " + str(score))
 		score = score + 1
-		if(score == 5000):
+		if(score == 500):
 			condition = true
 			_ready() #calls the ready function to spawn
 ###################################################################################
@@ -48,7 +48,6 @@ func _process(delta):
 		if(BOSS == null):
 			print("You win")
 			#GAME WIN SCREEN
-	
 	if(condition == true):
 		rng.randomize()
 		var num = round(rng.randf_range(1,6))
