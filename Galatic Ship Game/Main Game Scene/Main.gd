@@ -39,7 +39,7 @@ func _process(delta):
 	if(condition == false):
 		$Label.set_text("Score: " + str(score))
 		score = score + 1
-		if(score == 500):
+		if(score == 5000):
 			condition = true
 			_ready() #calls the ready function to spawn
 ###################################################################################
@@ -132,6 +132,3 @@ func _process(delta):
 				changeDiff1 = randomDiff1
 				
 
-func _on_Button_button_down():
-	queue_free()
-	get_tree(). reload_current_scene()
