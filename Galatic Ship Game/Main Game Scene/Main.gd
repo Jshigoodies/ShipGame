@@ -27,6 +27,12 @@ var score = 0
 var condition = false #to see when the boss should spawn
 
 func _ready():
+	#music
+	var player = AudioStreamPlayer.new()
+	self.add_child(player)
+	player.stream = load("res://music/Undertale OST 036 - Dummy! (online-audio-converter.com).wav")
+	player.play()
+	
 	$Label.set_text("Score: " + str(score))
 	# Replace with function body.
 	if(condition == true):
