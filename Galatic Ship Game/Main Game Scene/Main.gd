@@ -26,13 +26,18 @@ var duration = 3
 var score = 0
 var condition = false #to see when the boss should spawn
 
-func _ready():
+func _music():
 	#music
 	var player = AudioStreamPlayer.new()
 	self.add_child(player)
 	player.stream = load("res://music/Undertale OST 036 - Dummy! (online-audio-converter.com).wav")
 	player.play()
-	
+
+
+func _ready():
+	if condition == false:
+		#start music
+		_music()
 	$Label.set_text("Score: " + str(score))
 	# Replace with function body.
 	if(condition == true):
@@ -47,7 +52,7 @@ func _process(delta):
 	if(condition == false):
 		$Label.set_text("Score: " + str(score))
 		score = score + 1
-		if(score == 5000):
+		if(score == 500):
 			condition = true
 			_ready() #calls the ready function to spawn
 ###################################################################################
