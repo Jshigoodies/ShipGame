@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Theme" id=1]
+
+[node name="GameWin" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 232.0
+margin_top = 128.0
+margin_right = 284.0
+margin_bottom = 142.0
+theme = SubResource( 1 )
+text = "You Win"
+__meta__ = {
+"_edit_use_anchors_": false
+}

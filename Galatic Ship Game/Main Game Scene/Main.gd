@@ -48,8 +48,10 @@ func _process(delta):
 	#for boss dead
 	if(condition == true):
 		if(BOSS == null):
-			print("You win")
+			#print("You win")
 			#GAME WIN SCREEN
+			get_tree().change_scene_to(load("res://Main Game Scene/GameWin.tscn"))
+			
 	if(condition == true):
 		rng.randomize()
 		var num = round(rng.randf_range(1,6))
