@@ -19,6 +19,8 @@ var Enemy2 = preload("res://Main Game Scene/Enemy2.tscn")
 var Enemy3 = preload("res://Main Game Scene/Enemy3.tscn")
 # Called when the node enters the scene tree for the first time.
 
+var bone = preload("res://Main Game Scene/BONE.tscn")
+
 var duration = 3
 
 var score = 0
@@ -54,19 +56,29 @@ func _process(delta):
 		duration = duration - delta
 		if(duration < 0):
 			duration = 3
-			print(num)
+			#print(num)
+			
+			var Bone = bone.instance()
+			get_tree().get_root().add_child(Bone)
+			
 			if(num == 1):
-				pass
+				Bone.setVeleocity(-20, 0)
+				Bone.position = $BossAttacks/Attack1.global_position
 			elif(num == 2):
-				pass
+				Bone.setVeleocity(-20, 0)
+				Bone.position = $BossAttacks/Attack2.global_position
 			elif(num == 3):                  #ATTACK HERE AT SIDES < ----------------- work on
-				pass
+				Bone.setVeleocity(-20, 0)
+				Bone.position = $BossAttacks/Attack3.global_position
 			elif(num == 4):
-				pass
+				Bone.setVeleocity(20, 0)
+				Bone.position = $BossAttacks/Attack4.global_position
 			elif(num == 5):
-				pass
+				Bone.setVeleocity(20, 0)
+				Bone.position = $BossAttacks/Attack5.global_position
 			elif(num == 6):
-				pass
+				Bone.setVeleocity(20, 0)
+				Bone.position = $BossAttacks/Attack6.global_position
 
 #######################################################################################
 	#For Enemy3 Spawner

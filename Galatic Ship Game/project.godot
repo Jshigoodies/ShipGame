@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Galatic Ship Game"
-run/main_scene="res://Main Game Scene/Main.tscn"
+run/main_scene="res://Main Game Scene/Control.tscn"
 config/icon="res://Assets/Player2.png"
 
 [display]
