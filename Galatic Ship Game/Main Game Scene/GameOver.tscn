@@ -1,0 +1,15 @@
+[gd_scene format=2]
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 232.0
+margin_top = 136.0
+margin_right = 296.0
+margin_bottom = 150.0
+text = "YOU DIED"

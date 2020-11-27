@@ -55,4 +55,5 @@ func _on_Timer_timeout(): #It shoots out after the timer node reaches 0
 
 func _on_Area2D_area_entered(area):
 	queue_free()
+	get_tree().change_scene_to(load("res://Main Game Scene/GameOver.tscn"))
 	#the enimies don't have collision with the rest of the world, so it can only detect Area2D nodes
