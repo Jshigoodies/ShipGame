@@ -78,7 +78,7 @@ position = Vector2( 320, -64 )
 position = Vector2( 384, -64 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( 256, -48 )
+position = Vector2( 256, -64 )
 rotation = 1.57079
 amount = 258
 lifetime = 4.85
