@@ -52,7 +52,7 @@ func _process(delta):
 	if(condition == false):
 		$Label.set_text("Score: " + str(score))
 		score = score + 1
-		if(score == 500):
+		if(score == 5000):
 			condition = true
 			_ready() #calls the ready function to spawn
 ###################################################################################
