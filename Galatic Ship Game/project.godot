@@ -17,7 +17,9 @@ _global_script_class_icons={
 
 config/name="Galatic Ship Game"
 run/main_scene="res://Main Game Scene/Control.tscn"
+boot_splash/image="res://Assets/BOSS,png.png"
 config/icon="res://Assets/Player2.png"
+config/windows_native_icon="res://icon/hnet.com-image.ico"
 
 [display]
 
