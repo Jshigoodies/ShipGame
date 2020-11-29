@@ -24,5 +24,10 @@ __meta__ = {
 margin_top = 48.0
 margin_right = 40.0
 margin_bottom = 62.0
-text = "This is my first Game, so keep that in mind"
+text = "This is my first Game
+Also, lower the volume just in case I break your ear drums out by accident.
+Especially the boss"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]

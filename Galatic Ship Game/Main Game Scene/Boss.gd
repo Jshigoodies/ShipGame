@@ -42,6 +42,13 @@ func _physics_process(delta):
 		bone.setVeleocity(0,10)
 		get_tree().get_root().add_child(bone)
 		bone.position = $AttackPlace.global_position
+		
+		#sound effect
+		var player = AudioStreamPlayer.new()
+		self.add_child(player)
+		player.stream = load("res://music/kirby-poyo (online-audio-converter.com).wav")
+		player.play()
+		
 	else:
 		timeUntilAttack = timeUntilAttack - delta
 
